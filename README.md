@@ -1,3 +1,4 @@
+# Targeted File Expiration for Image Acquisition computers #
 Image acquisition with scientific instruments has improved greatly over the years with computer-connected acquisition machines. What hasn't improved is the day-to-day cleanup of files to ensure there's enough local room on these machines to allow for more users to capture images.
 
 This scripts sets out to make a Windows-native auto-expiration system which specifically targets image files, but leaves other user profile settings alone such as configuration settings, notes, or other non-imaging files.
