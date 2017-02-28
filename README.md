@@ -33,6 +33,8 @@ New file types can be added by adding or removing as many of `-or $_.Extension -
 
 **DeleteScript.ps1 ** doesn't have nearly the customization, because the filters already took place through the first script. This just goes through the hidden folder and deletes files older than X days (which should be a larger value than the move script). It also has a routine to go through and delete any empty folders, to keep from cluttering the inode tables with excess folders.
 
+***NOTE:*** It is *highly* recommended to manually execute the powershell script with the date modified to a greater value for the first run. This will give users time to realize they've lost files without them being deleted. If space permits, 6 months (`-180` days) is recommended.
+
 `$path = "C:\TO-BE-DELETED"` The path where the images are hidden
 
 `$limit = (Get-Date).AddDays(-60)` This is the time cutoff in negative to go backwards in time. This sets how many calendar days ago to look for files written before X days ago.
